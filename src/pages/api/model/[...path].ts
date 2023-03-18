@@ -1,7 +1,7 @@
 import { requestHandler } from "@zenstackhq/next";
 import { withPresets } from "@zenstackhq/runtime";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerAuthSession } from "../../../server/auth";
+import { getServerAuthSession } from "../auth/[...nextauth]";
 import { prisma } from "../../../server/db";
 
 async function getPrisma(req: NextApiRequest, res: NextApiResponse) {
