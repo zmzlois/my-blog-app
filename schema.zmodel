@@ -6,10 +6,7 @@ plugin reactHooks {
 }
 
 
-plugin trpc {
-    provider = '@zenstackhq/trpc'
-    output = 'src/server/routers/generated'
-}
+
 
 
 generator client {
