@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { signIn } from "next-auth/react";
 import Router from "next/router";
 import { useState, type FormEvent } from "react";
+import authOptions from "./api/auth/[...nextauth]";
 
 const Signin: NextPage = () => {
   const [email, setEmail] = useState("");

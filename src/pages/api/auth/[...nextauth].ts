@@ -2,7 +2,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import type { PrismaClient } from "@prisma/client";
 import { compare } from "bcryptjs";
 import type { GetServerSidePropsContext } from "next";
-import {
+import NextAuth, {
   getServerSession,
   type DefaultSession,
   type NextAuthOptions,
@@ -90,3 +90,5 @@ export const getServerAuthSession = (ctx: {
 }) => {
   return getServerSession(ctx.req, ctx.res, authOptions);
 };
+
+export default NextAuth(authOptions);
